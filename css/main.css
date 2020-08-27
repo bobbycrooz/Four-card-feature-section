@@ -1,11 +1,26 @@
+/*-========================
+===========crooz============
+Style in /css/main
+Author: Idris Ifeoluwa
+style convention:
+----------------FlexBox,BEM
+==========crooz=============
+============================
+
+ */
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
 @import url('href="https://fonts.googleapis.com/css2?family=Do+Hyeon');
+
+/* global reset */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-/* global reset */
+
 
 /* cascade custom vriables */
 :root {
@@ -45,12 +60,14 @@ p{
     font-family: var(--poppins);
 }
 .container {
+    margin-top: 30px;
     width: 100%;
     display: flex;
-    padding: 2.5rem 1.25rem ;
+    padding: 3.5rem 1.25rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 
 }
 
@@ -86,6 +103,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 110%;
    
 }
 

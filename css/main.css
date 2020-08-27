@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('href="https://fonts.googleapis.com/css2?family=Do+Hyeon');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* global reset */
+
+/* cascade custom vriables */
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --header: hsl(234, 12%, 34%);
+    --text: hsl(229, 6%, 66%);
+    --bg: hsl(0, 0%, 98%);
+
+    --lighter: 200;
+    --ligth: 400;
+    --dark: 600;
+
+    --poppins: 'Poppins', sans-serif;
+    --nick: 'Do Hyeon', sans-serif;
+}
+
+body{
+    background-color: var(--bg);
+    font-size: 0.9375rem;
+    font-family: var(--poppins)
+}
+
+h1,
+h2,
+h3,
+h4,
+h6{
+    color: var(--header);
+}
+
+p{
+    color: var(--text);
+    font-family: var(--poppins);
+}
+.container {
+    width: 100%;
+    display: flex;
+    padding: 2.5rem 1.25rem ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* header section */
+header{
+    max-width: 350px;
+    
+    padding: 5px;
+    text-align: center;
+}
+
+.header__title{
+    font-weight: var(--ligth);
+    font-size: 1.5rem;
+}
+.header__subtitle{
+    font-weight: var(--dark);
+    font-size: 1.57rem;
+}
+
+.header__discription{
+    font-size: 1rem;
+}
+/* heading */
+
+
+.card{
+    max-width: 350px;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+    box-shadow: 0px 10px 10px -5px  var(--text);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+}
+
+.card::before{
+    content: "";
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.card--super::before{
+    background-color: var(--Cyan);
+}
+
+.card--team::before{
+    background-color: var(--Red);
+}
+
+.card--karma::before{
+    background-color: var(--Orange);
+}
+
+.card--calc::before{
+    background-color: var(--Blue);
+}
+
+
+.card-title{
+    font-weight: var(--dark);
+}
+
+.card-subtitle{
+    font-size: 0.8rem;
+}
+.card__image{
+    align-self: flex-end;
+}
+
+.nick{
+    font-family: var(--nick);
+    font-weight: var(--ligth);
+}
+.nick:hover{
+    font-size: 1.4rem;
+    transition: 1s ease;
+    text-decoration: none;
+    
+}
+/* card */
+
+
+@media only screen and (min-width:600px){
+
+    header{
+        max-width: 390px;
+        
+    }
+    .header__discription{
+        font-size: 0.73rem;
+    }
+    .main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card--super{
+        margin-right: 20px;
+    }
+
+    .card--calc{
+        margin-left: 20px;
+    }
+}
